@@ -6,12 +6,7 @@ import (
 	"runtime"
 )
 
-func main() {
-	// res := appDir()
-	// fmt.Println(res)
-}
-
-//TODO: Add varadic variables to path.Join
+//Is returns a string of the appropirate directory on the host machine for application storage
 func Is() string {
 	switch runtime.GOOS {
 	case "darwin":

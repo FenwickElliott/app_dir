@@ -17,6 +17,8 @@ func appDir() string {
 	switch runtime.GOOS {
 	case "darwin":
 		return path.Join(os.Getenv("HOME"), "Library", "Application Support")
+	case "linux":
+		return os.Getenv("XDG_CONFIG_HOME")
 	case "windows":
 		return os.Getenv("APPDATA")
 	default:

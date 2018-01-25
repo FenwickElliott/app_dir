@@ -12,7 +12,7 @@ func Is() string {
 	case "darwin":
 		return path.Join(os.Getenv("HOME"), "Library", "Application Support")
 	case "linux":
-		return os.Getenv("XDG_CONFIG_HOME")
+		return path.Join(os.Getenv("HOME"), ".config")
 	case "windows":
 		return os.Getenv("APPDATA")
 	default:

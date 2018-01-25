@@ -19,3 +19,12 @@ func Is() string {
 		return runtime.GOOS
 	}
 }
+
+//Join returns the application storage directory followed by variadic string arguments
+func Join(dirs ...string) string {
+	res := Is()
+	for _, dir := range dirs {
+		res = path.Join(res, dir)
+	}
+	return res
+}
